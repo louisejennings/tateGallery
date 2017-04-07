@@ -1,0 +1,62 @@
+<div class="container contents" method="post" action="/artists/{{artist.id}}"> <!--Go to Routes Artists.js POST /id  --> 
+  <div class="row">
+    <div class="topLeft">
+      <p class="largeImage">{{truncArtist artist.fc}}</p><!---Display Title Top Left--->
+    </div>
+    <div class="row">
+      <div class="top">
+        <ul class="grid cs-style-5">
+          <li class="box">  <!--TOP LEFT-->
+            <figure class="smallImage">
+              <div class="smallDiv">
+                <a href="/artists/totalWorks/{{artist.totalWorks}}"><!--Go to Routes Artists.js /TotalWorks--> 
+                  <p class="smallImage">{{artist.totalWorks}}</p>
+                </a>
+              </div>
+              {{> figcaption}}
+            </figure>
+          </li>
+          {{> hidden}}<!---Partial hidden sets p class (css visibility:hidden) --> <!---TOP RIGHT -->  
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="middle">
+        <ul class="grid cs-style-5">
+          <li class="box">  <!--MIDDLE LEFT-->
+            <figure class="smallImage">
+              <div class="smallDiv">                                                                                      
+                <a href="/artists/gender/{{artist.gender}}">  <!--Go to Routes Artists.js /Gender  -->  
+                  <p class="smallImage">{{artist.gender}}</p>                              
+                </a>
+              </div>
+              {{> figcaption}} <!---Partial 'SEE MORE' --> 
+            </figure>
+          </li>
+          {{> hidden}} <!---MIDDLE RIGHT -->  
+        </ul> 
+      </div>
+    </div>
+    <div class="row">
+      <div class="bottom">
+        <a href="/artwork"> <!--Image link change to Artwork-->
+          <img class="viewOptions back">
+        </a>
+        <ul class="grid cs-style-5">
+          <li class="box">  <!--BOTTOM LEFT-->
+            <figure class="smallImage">
+              <div class="smallDiv">
+                <a href="/artists/birthYear/{{artist.birthYear}}"> <!--Go to Routes Artists.js /BirthYear-->   
+                  <p class="smallImage">{{artist.birthYear}}</p>
+                </a>
+              </div>
+              {{> figcaption}}
+            </figure>
+          </li>
+          {{> hidden}} <!---BOTTOM MIDDLE -->  
+          {{> hidden}} <!---BOTTOM RIGHT--->
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

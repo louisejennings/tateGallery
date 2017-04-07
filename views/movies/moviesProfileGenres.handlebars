@@ -1,0 +1,66 @@
+<div class="container contents" method="post" action="movies/{{movies.id}}">
+  <div class="row">
+    <div class="topLeft">
+      <img class="largeImage" src="{{movies.image_url}}">
+    </div>
+    <div class="row">
+      <div class="top">
+        <ul class="grid cs-style-5">
+          <li class="box">  <!--TOP LEFT-->
+            <figure class="smallImage">
+              <div class="smallDiv">
+                <a href="/movies/year/{{movies.year}}"> <!--Go to Routes Movies.js /year--> 
+                  <p class="smallImage">{{movies.year}}</p>
+                </a>
+              </div>
+              {{> figcaption}} <!---Partial 'SEE MORE' --> 
+            </figure>
+          </li>
+          {{> hidden}}   <!--TOP RIGHT-->
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="middle">
+        <ul class="grid cs-style-5">
+          <li class="box">  <!--MIDDLE LEFT-->
+            <div class="smallDiv" id="title">
+              <p class="smallImage">{{truncMovie movies.movieTitle}}</p><!---Title of Movie--->
+            </div>
+          </li>
+          {{> hidden}} <!---Partial hidden sets p class (css visibility:hidden) -->  <!--MIDDLE RIGHT-->            
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="bottom">
+        <a href="/movies">
+          <img class="viewOptions back">
+        </a> 
+        <ul class="grid cs-style-5">
+          <li class="box">   <!--BOTTOM LEFT-->
+            <figure class="smallImage">
+              <div class="smallDiv">
+                <a href="/movies/directors/{{movies.directors}}"> <!--Go to Routes Movies.js /directors--> 
+                  <p class="smallImage">{{dirName movies.directors}}</p> <!-- Partial Initial and Surname of Director-->
+                </a>
+              </div>
+              {{> figcaption}}
+            </figure>
+          </li>
+          {{> hidden}}  <!--BOTTOM MIDDLE-->
+          <li class="box">  <!--BOTTOM RIGHT-->
+            <figure class="smallImage">
+              <div class="smallDiv">
+                <a href="/movies/genres/{{movies.genres}}"> <!--Go to Routes Movies.js /genres--> 
+                  <p class="smallImage">{{movies.genres}}</p>
+                </a>
+              </div>
+              {{> figcaption}}
+            </figure>
+          </li>
+        </ul> 
+      </div>
+    </div>
+  </div>
+</div>

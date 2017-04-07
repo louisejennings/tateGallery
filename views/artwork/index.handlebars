@@ -1,0 +1,32 @@
+{{> navMovies}}
+<div class="wrapper">
+  <div class="container contents">
+    <div class="row">
+      <div class="topLeft">  <!---Display Large Image Top Left--->
+        {{#with artworks.[0]}}<a href="artwork/{{id}}"><img class="largeImage" src="{{thumbnailUrl}}"></a>{{/with}}  
+      </div>
+      <div class="row">
+        <div class="top">
+          {{#with artworks.[1]}}{{> artworkImage}}{{/with}} <!---Partial display artwork image --->
+          {{#with artworks.[2]}}{{> artworkImage}}{{/with}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="middle">
+          {{#with artworks.[3]}}{{> artworkImage}}{{/with}}
+          {{#with artworks.[4]}}{{> artworkImage}}{{/with}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="bottom">
+          <a href="/artists"> 
+            <img class="viewOptions artists"> <!--Image link change to Artists-->
+          </a>
+          {{#with artworks.[5]}}{{> artworkImage}}{{/with}}
+          {{#with artworks.[6]}}{{> artworkImage}}{{/with}}
+          {{#with artworks.[7]}}{{> artworkImage}}{{/with}}
+        </div>
+      </div>
+    </div> 
+  </div> 
+</div>

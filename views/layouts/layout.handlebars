@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <title>Tate Gallery Project</title>
+    <!---link rel="stylesheet" type="text/css" href="/css/style.css">--->
+    <link rel="stylesheet" type="text/css" href="/css/darkStyle.css"><!--To use DARK STYLE uncomment and comment out style.css --->
+  </head>
+  {{#if index}}
+    {{> index}}
+  {{/if}}
+  <body>
+	  <div class="container">
+      <div class="header clearfix">
+      </div>
+      {{#if hidden}}
+        {{> hidden}}
+      {{/if}}
+
+      {{{body}}}
+
+    </div>
+    <footer>&copy; Tate Gallery Project</footer>
+    <script>window.jQuery || document.write('<script src="/js/jquery-1.11.2.min.js"><\/script>')</script>
+  </body>
+</html>

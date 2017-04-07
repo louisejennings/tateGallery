@@ -1,0 +1,67 @@
+<div class="container contents" method="post" action="movies/{{movies.id}}">
+  <div class="row">
+    <div class="topLeft">
+      <img class="largeImage" src="{{movies.image_url}}" onError="this.onerror=null;this.src='/images/noImage.png';">
+    </div>
+    <div class="row">
+      <div class="top">
+        <ul class="grid cs-style-5">
+          <li class="box">  <!--TOP LEFT-->
+            <figure class="smallImage">
+              <div class="smallDiv">
+                <a href="/movies/directors/{{movies.directors}}"> <!--Go to Routes Movies.js /directors--> 
+                  <p class="smallImage bottomMiddle">{{dirName movies.directors}}</p> <!-- Partial Initial and Surname of Director-->
+                </a>
+              </div>
+              {{> figcaption}} <!---Partial 'SEE MORE' --> 
+            </figure>
+          </li>
+          <li class="box">   <!--TOP RIGHT-->
+            <figure class="smallImage">
+              <div class="smallDiv">
+                <a href="/movies/year/{{movies.year}}"> <!--Go to Routes Movies.js /year--> 
+                  <p class="smallImage middleLeft">{{movies.year}}</p>
+                </a>
+              </div>
+              {{> figcaption}}
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="middle">
+        <ul class="grid cs-style-5">
+          <li class="box">  <!---MIDDLE LEFT--->
+            <div class="smallDiv" id="title">
+              <p class="smallImage">{{truncMovie movies.movieTitle}}</p>  <!---Title of Movies--->
+            </div>
+          </li>
+          <li class="box">  <!---MIDDLE RIGHT--->
+            <figure class="smallImage">
+              <div class="smallDiv">
+                <a href="/movies/genres/{{movies.genres}}"> <!--Go to Routes Movies.js /genres--> 
+                  <p class="smallImage bottomLeft">{{movies.genres }}</p>
+                </a>
+              </div>
+              {{> figcaption}}
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="bottom">
+        <a href="/movies">
+          <img class="viewOptions back">
+        </a>
+        <ul class="grid cs-style-5">
+          {{> hidden}} <!---Partial hidden sets p class (css visibility:hidden) --> <!--BOTTOM LEFT-->
+          {{> hidden}} <!--BOTTOM MIDDLE-->
+          {{> hidden}} <!--BOTTOM RIGHT -->
+        </ul> 
+      </div>
+    </div>
+  </div>
+</div>
+

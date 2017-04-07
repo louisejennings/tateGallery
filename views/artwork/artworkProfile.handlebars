@@ -1,0 +1,66 @@
+<div class="container contents" method="post" action="/artwork/{{artwork.id}}"> <!--Go to Routes Artwork.js POST /id  --> 
+  <div class="row">
+    <div class="topLeft"> <!---Display Large Image Top Left, if Error display noImage.png--->
+      <img class="largeImage" src="{{artwork.thumbnailUrl}}" onError="this.onerror=null;this.src='/images/noImage.png';">
+    </div>
+    <div class="row">
+      <div class="top">
+        <ul class="grid cs-style-5">
+          {{> hidden}} <!---Partial hidden sets p class (css visibility:hidden) -->  <!--TOP LEFT-->
+          <li class="box"> <!--TOP RIGHT-->
+            <figure class="smallImage">
+              <div class="smallDiv">                                                                                      
+                <a href="/artwork/acquisitionYear/{{artwork.acquisitionYear}}"> <!--Go to Routes Artwork.js /acquisitionYear--> 
+                  <p class="smallImage">{{artwork.acquisitionYear}}</p>         <!---Year of Artwork--->
+                </a>
+              </div>
+              {{> figcaption}} <!---Partial 'SEE MORE' --> 
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="middle">
+        <ul class="grid cs-style-5">
+          <li class="box"> <!--MIDDLE LEFT-->
+            <div class="smallDiv" id="title">
+              <p class="smallImage">{{truncate artwork.title}}</p>      <!---Helper Truncate Title of Artwork--->
+            </div>
+          </li>
+          {{> hidden}}  <!--MIDDLE RIGHT-->
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="bottom">
+        <a href="/artwork">
+          <img class="viewOptions back">
+        </a>
+        <ul class="grid cs-style-5">
+          <li class="box">  <!--BOTTOM LEFT-->
+            <figure class="smallImage">
+              <div class="smallDiv">
+                <a href="/artwork/medium/{{firstwordMedium artwork.medium}}">    <!--Go to Routes Artwork.js /medium--> 
+                  <p class="smallImage">{{firstwordMedium artwork.medium }}</p>  <!--Helper first word of Medium of Artwork--->
+                </a>
+              </div>
+              {{> figcaption}}
+            </figure>
+          </li>
+          {{> hidden}}  <!--BOTTOM MIDDLE-->
+          <li class="box">  <!--BOTTOM RIGHT-->
+            <figure class="smallImage">
+              <div class="smallDiv">
+                <a href="/artwork/artist/{{artwork.all_artists}}"> <!---Helper Artist Name Initial and Surname--->
+                  <p class="smallImage">{{artistName artwork.all_artists}}</p> <!--Go to Routes Artwork.js /all_artists--> 
+                </a>
+              </div>
+              {{> figcaption}}
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

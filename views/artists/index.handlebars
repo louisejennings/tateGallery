@@ -1,0 +1,31 @@
+{{> navMovies}}
+<div class="container contents">
+  <div class="row">
+    <div class="topLeft">
+        {{#with artists.[0]}}<a href="/artists/{{id}}"><p class="largeImage">{{{truncArtist fc}}}</p></a>{{/with}} <!---Display Title Top Left--->
+     </div>
+     <div class="row">
+        <div class="top">
+         {{#with artists.[1]}}{{> artistName}}{{/with}} <!---Partial displays artist name --->
+         {{#with artists.[2]}}{{> artistName}}{{/with}}
+        </div>
+    </div>
+    <div class="row">
+      <div class="middle">
+        {{#with artists.[3]}}{{> artistName}}{{/with}}
+        {{#with artists.[4]}}{{> artistName}}{{/with}}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="bottom">
+      {{#with artists.[5]}}{{> artistName}}{{/with}}
+      {{#with artists.[6]}}{{> artistName}}{{/with}}
+      {{#with artists.[7]}}{{> artistName}}{{/with}}
+      <a href="/artwork">
+        <img class="viewOptions artworks" > <!--Image link change to Artwork-->
+      </a>
+    </div>
+  </div>
+</div>
+

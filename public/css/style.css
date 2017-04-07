@@ -1,0 +1,322 @@
+body{
+	margin: 0;
+    background-color: white;
+}
+
+/* Homepage will always have white background even if on darkStyle.css, this allows the Tate Image to be clearly visible*/
+body#indexPage{ 
+    background-color: white;
+}
+
+.header-clearfix{
+    z-index: 99;
+    position: relative;
+}
+/*---------Link to MOVIES Collection ------*/
+/*Hover over TOP LEFT CORNER to reveal link to Movies Collection -*/
+nav{
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav a{
+    text-decoration: none;
+    color:white; 
+}
+
+nav a:hover{
+    text-decoration: none;
+    color:black;
+    font-family: arial;
+}
+/*--------------END--------------------*/
+
+.container{
+	width: 100%;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.homePage{
+    width: 100%;
+    margin-top: 50px;
+}
+
+img.logoMain {
+    height: 100%;
+    width: auto;
+    display:block;
+    margin:auto;
+}
+
+.enterButton{
+    border-radius: 12px;
+    background-color: #000;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: arial;
+    width:100px;
+    display:block;
+    margin:auto;
+    margin-top: 50px;
+}
+
+/*--------------------------Images-------------------*/
+.container.contents{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width:750px;
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.largeImage{        /* Large Image 350 */       /*50 gap*/
+    float: left;
+    width: 348px; 
+    height: 348px;
+    border: 1px solid black;
+}
+
+.smallImage{        /* Small Image 150 */      /*50 gap*/
+    float: left;
+    width: 148px;
+    height: 148px;
+    margin-left: 50px;
+    border: 1px solid black;
+}
+
+p.largeImage,p.smallImage{
+    margin-top:0;
+    margin-bottom:0;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.62);
+    font-family: arial;
+    text-align: center;
+    vertical-align: middle;
+}
+
+p.largeImage{
+    line-height: 348px;
+}
+
+p.smallImage{
+    line-height: 148px;
+    height: 148px;
+    width: 148px;
+}
+
+.topLeft{
+    width: 350px; 
+    height: 350px;
+}
+
+.top{
+    float: left;
+    margin-left: 350px;
+    margin-top: -350px;
+}
+
+.middle{
+    float: left;
+    margin-left: 350px;
+    margin-top: -150px;
+}
+
+.bottom{
+    float: left;
+    margin-left: -50px;
+    margin-top: 50px;
+}
+/*--------------Images for Menu (View Artists, View Artworks, Back)-------*/
+.viewOptions{
+    height: 148px;
+    width: 148px;
+    float: left;
+    margin-left: 50px;
+    border: 1px solid black;
+}
+
+.viewOptions.artists{ /* View Artists for Normal CSS */
+    background-image: url("/images/viewArtistsWhite.jpg");
+}
+
+.viewOptions.artworks{ /* View Artworks for Normal CSS */
+    background-image: url("/images/viewArtworksWhite.jpg");
+}
+
+.viewOptions.back{ /* Back for Normal CSS */
+    background-image: url("/images/back.jpg");
+}
+
+/*------------PARTIAL HIDDEN----------------*/
+
+ /*IF VISIBILITY of p.hidden SET TO VISIBLE -uncomment #hidden */
+
+/*#hidden{       
+    margin-top: -16px;
+}*/
+
+p.hidden{
+    visibility: hidden; /*If you want to set visibility to visible - change hidden to visible */
+    /*background-color: black; */ /* Uncomment to add a background colour to visible square */
+    height: 150px;
+    width: 150px;
+    float: left;
+}
+
+/*-------------Image Hover Overlay------------------*/
+
+#title p.smallImage{
+    margin-left:0;
+    border: 1px solid black;
+}
+.smallDiv#title{
+    width: 150px;
+    height: 150px;
+}
+
+ul.grid.cs-style-5{         
+    width: 850px;
+    margin:0;
+    padding: 0;
+}
+
+.grid {
+    list-style: none;
+    margin: 0;
+}
+
+.grid li {
+    display: inline-block;
+    margin: 0;
+    text-align: left;
+    position: relative;
+    width: 550px;
+}
+
+li.box{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-left: 50px;
+}
+
+.grid figure {
+    margin: 0;
+    position: relative;
+}
+
+.grid figure p {
+    display: block;
+    position: relative;
+    width: 148px;
+    top: 20px;
+    left: 20px;
+    border:none;
+}
+
+.grid figcaption {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    padding: 20px;
+    width: 148px;
+}
+
+.grid figcaption h3 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    font-family: arial;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.smallDiv{      /*Set background of non hidden squares to grey*/
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 148px;
+    width: 148px;
+    top: -1px;
+    left: -1px;
+}
+
+.cs-style-5 figure p {
+    z-index: 10;
+    -webkit-transition: -webkit-transform 0.4s;
+    -moz-transition: -moz-transform 0.4s;
+    transition: transform 0.4s;
+}
+
+.cs-style-5 figure:hover p,
+.cs-style-5 figure.cs-hover p {
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);  /*shrinks to smaller square*/
+    font-size: 25px;
+}
+
+.cs-style-5 figcaption {
+    height: 110px;
+    width: 110px;
+    opacity: 0;
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+    -moz-transition: -moz-transform 0.4s, opacity 0.4s;
+    transition: transform 0.4s, opacity 0.4s;
+}
+
+.cs-style-5 figure:hover figcaption,
+.cs-style-5 figure.cs-hover figcaption {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(0.5); /*smaller square*/
+    transform: scale(1); /*fill square*/
+    opacity: 1;
+
+}
+
+.cs-style-5 figure a {
+    position: relative;
+    bottom: 20px;
+    right: 70px;
+    width: 150px;
+}
+
+/*-------------------footer----------------------*/
+
+footer {
+    padding-top: 50px;
+    padding-bottom: 5px;
+    color: black;
+    background-color: white;
+    clear: left;
+    text-align: center;
+    margin: 0px;
+    float: left;
+    width: 100%;
+    font-family: arial;
+    font-size: 10px;
+}
+
+
+
+
